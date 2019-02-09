@@ -19,7 +19,7 @@ I've tried epoch length with 20, 25, 30, 35, 40. I found that 35 is better, and 
 model for 40 epoch, its mse behaved unstable and didn't decrease anymore. ( with lr = 1e-4)
 
 
-Test with different type of loss function
+Different loss functions
 -------------------------------------------------------------------------
 
 I've tried MSE, BCE, BCEWithLogitsLoss, SmoothL1Loss function before, but their performance
