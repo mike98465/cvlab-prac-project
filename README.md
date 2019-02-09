@@ -35,9 +35,9 @@ lr decay:
 I have used lr_scheduler to implement the lr decay, and I found that
 the performance on mse is much better than the previous fixed lr. (1e-4)
 
-    $  optimizer = torch.optim.Adam(model.parameters()) #modified
-    $  scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1) #added
-    $  scheduler.step() #added
+      optimizer = torch.optim.Adam(model.parameters()) #modified
+      scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1) #added
+      scheduler.step() #added
 
 lower lr:
 I tried lr = 1e-5, but it converged too slow and I just gave up this experience.
@@ -54,9 +54,9 @@ Use deeper one & adjust model structure
 
 try to use deeper model by:
 
-    $  ConvBlock(64, 128), #added
-    $  nn.MaxPool2d((2, 2)), #added
-    $  x = self.act1(self.bn2(self.conv2(x))) #added
+      ConvBlock(64, 128), #added
+      nn.MaxPool2d((2, 2)), #added
+      x = self.act1(self.bn2(self.conv2(x))) #added
 
 its mse performance didn't seem better.
 
@@ -66,7 +66,7 @@ Higher resolution image
 
 code adjusted by:
 
-    $  img = img.resize((400, 240)) #modified
-    $  img_b = torch.rand(16, 3, 400, 240).to(device) #modified 
+      img = img.resize((400, 240)) #modified
+      img_b = torch.rand(16, 3, 400, 240).to(device) #modified 
 
 its mse performance didn't seem better.
