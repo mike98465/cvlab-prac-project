@@ -54,9 +54,7 @@ try to use deeper model by:
 
     $  ConvBlock(64, 128), #added
     $  nn.MaxPool2d((2, 2)), #added
-
-or adjust model structure
-x = self.act1(self.bn2(self.conv2(x))) #added
+    $  x = self.act1(self.bn2(self.conv2(x))) #added
 
 its mse performance didn't seem better.
 
