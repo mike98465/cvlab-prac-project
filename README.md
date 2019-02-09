@@ -1,9 +1,9 @@
 # cvlab_prac_project
-test model with different parameters or adjust its structure
+Test model with different parameters or adjust its structure
 --------------------------------------------------------------------------
 
 
-I've test model with:
+    I've test model with:
 
 *   select epoch length (train longer)
 *   test with different type of loss function
