@@ -29,7 +29,7 @@ were all worse than the L1Loss. Hence, I didn't modify this part of the orginal 
 3.lr decay or lower lr
 -------------------------------------------------------------------------
 
-+ lr decay:
+lr decay:
 I have used lr_scheduler to implement the lr decay, and I found that the performance on mse
 is much better than the previous fixed lr. (1e-4)
 
@@ -37,7 +37,7 @@ is much better than the previous fixed lr. (1e-4)
     $  scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1) #added
     $  scheduler.step() #added
 
-+ lower lr:
+lower lr:
 I tried lr = 1e-5, but it converged too slow and I just gave up this experience.
 
 
