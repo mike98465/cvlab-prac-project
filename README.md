@@ -15,23 +15,25 @@ I've test model with:
 Select epoch length (train longer)
 -------------------------------------------------------------------------
 
-I've tried epoch length with 20, 25, 30, 35, 40. I found that 35 is better, and if I train
-model for 40 epoch, its mse behaved unstable and didn't decrease anymore. ( with lr = 1e-4)
+I've tried epoch length with 20, 25, 30, 35, 40. 
+I found that 35 is better, and if I train model for 40 epoch,
+its mse behaved unstable and didn't decrease anymore. ( with lr = 1e-4)
 
 
 Different loss functions
 -------------------------------------------------------------------------
 
-I've tried MSE, BCE, BCEWithLogitsLoss, SmoothL1Loss function before, but their performance
-were all worse than the L1Loss. Hence, I didn't modify this part of the orginal code. 
+I've tried MSE, BCE, BCEWithLogitsLoss, SmoothL1Loss function before,
+but their performancewere all worse than the L1Loss. 
+Hence, I didn't modify this part of the orginal code. 
 
 
 Lr decay or lower lr
 -------------------------------------------------------------------------
 
 lr decay:
-I have used lr_scheduler to implement the lr decay, and I found that the performance on mse
-is much better than the previous fixed lr. (1e-4)
+I have used lr_scheduler to implement the lr decay, and I found that
+the performance on mse is much better than the previous fixed lr. (1e-4)
 
     $  optimizer = torch.optim.Adam(model.parameters()) #modified
     $  scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1) #added
