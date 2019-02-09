@@ -12,20 +12,18 @@ Test model with different parameters or adjust its structure
 *   use deeper one & adjust model structure
 *   higher resolution image
 
--------------------------------------------------------------------------
-
 1.  select epoch length (train longer)
 -------------------------------------------------------------------------
 
-  I've tried epoch length with 20, 25, 30, 35, 40. I found that 35 is better, and if I train
-  model for 40 epoch, its mse behaved unstable and didn't decrease anymore. ( with lr = 1e-4)
+I've tried epoch length with 20, 25, 30, 35, 40. I found that 35 is better, and if I train
+model for 40 epoch, its mse behaved unstable and didn't decrease anymore. ( with lr = 1e-4)
 
 
 2.  test with different type of loss function
 -------------------------------------------------------------------------
 
-  I've tried MSE, BCE, BCEWithLogitsLoss, SmoothL1Loss function before, but their performance
-  were all worse than the L1Loss. Hence, I didn't modify this part of the orginal code. 
+I've tried MSE, BCE, BCEWithLogitsLoss, SmoothL1Loss function before, but their performance
+were all worse than the L1Loss. Hence, I didn't modify this part of the orginal code. 
 
 
 3.  lr decay or lower lr
