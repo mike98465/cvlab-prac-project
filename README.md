@@ -24,7 +24,7 @@ Different loss functions
 -------------------------------------------------------------------------
 
 I've tried MSE, BCE, BCEWithLogitsLoss, SmoothL1Loss function before,
-but their performancewere all worse than the L1Loss. 
+but their performance were all worse than the L1Loss. 
 Hence, I didn't modify this part of the orginal code. 
 
 
