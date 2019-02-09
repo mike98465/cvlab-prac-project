@@ -12,21 +12,21 @@ I've test model with:
 *   use deeper one & adjust model structure
 *   higher resolution image
 
-1.Select epoch length (train longer)
+Select epoch length (train longer)
 -------------------------------------------------------------------------
 
 I've tried epoch length with 20, 25, 30, 35, 40. I found that 35 is better, and if I train
 model for 40 epoch, its mse behaved unstable and didn't decrease anymore. ( with lr = 1e-4)
 
 
-2.Test with different type of loss function
+Test with different type of loss function
 -------------------------------------------------------------------------
 
 I've tried MSE, BCE, BCEWithLogitsLoss, SmoothL1Loss function before, but their performance
 were all worse than the L1Loss. Hence, I didn't modify this part of the orginal code. 
 
 
-3.Lr decay or lower lr
+Lr decay or lower lr
 -------------------------------------------------------------------------
 
 lr decay:
@@ -41,13 +41,13 @@ lower lr:
 I tried lr = 1e-5, but it converged too slow and I just gave up this experience.
 
 
-4.Use SGD instead of Adam
+Use SGD instead of Adam
 ------------------------------------------------------------------------
 
 SGD optimizer didn't perform better than the Adam.
 
 
-5.Use deeper one & adjust model structure
+Use deeper one & adjust model structure
 ------------------------------------------------------------------------
 
 try to use deeper model by:
@@ -59,7 +59,7 @@ try to use deeper model by:
 its mse performance didn't seem better.
 
 
-6.Higher resolution image
+Higher resolution image
 ------------------------------------------------------------------------
 
 code adjusted by:
