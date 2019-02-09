@@ -15,7 +15,7 @@ I've test model with:
 -------------------------------------------------------------------------
 
 1.  select epoch length (train longer)
-=========================================================================
+-------------------------------------------------------------------------
 
 I've tried epoch length with 20, 25, 30, 35, 40. I found that 35 is better, and if I train
 model for 40 epoch, its mse behaved unstable and didn't decrease anymore. ( with lr = 1e-4)
